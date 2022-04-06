@@ -64,6 +64,7 @@ function App() {
         {list.length > 0 && (
           <ShoppingListScreen
             list={list}
+            setList={setList}
             setShowModal={setShowModal}
             toggleCompleted={toggleCompleted}
           />

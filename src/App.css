@@ -124,6 +124,7 @@ label {
   width: 100%;
   overflow: auto;
   flex-direction: column;
+  padding-left: 0px;
 }
 
 li {
@@ -135,6 +136,7 @@ li {
   padding: 4px 0px;
   width: 100%;
   height: 44px;
+
   text-align: center;
   align-items: center;
   justify-content: space-between;
@@ -164,4 +166,11 @@ li {
 .completed {
   text-decoration: line-through;
   color: #a9a9a8;
+}
+/* sort */
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 22px;
 }
