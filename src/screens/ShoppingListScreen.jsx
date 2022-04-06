@@ -4,6 +4,7 @@ import Sorter from "../components/Sorter";
 function ShoppingListScreen({ list, setShowModal }) {
   const completedItems = list.filter((item) => item.isCompleted === true);
   const unCompletedItems = list.filter((item) => item.isCompleted === false);
+  console.log(completedItems);
   return (
     <div className="shopping-list">
       <h1>Shopping List</h1>

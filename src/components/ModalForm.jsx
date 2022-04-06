@@ -20,8 +20,8 @@ export default function ModalForm({ modalState, onAddItem }) {
   }
 
   return (
-    <form className="modal" onSubmit={(e) => onSubmit(e)}>
-      <div className="modal-content">
+    <div className="modal">
+      <form className="modal-content" onSubmit={(e) => onSubmit(e)}>
         <h2>Create an item</h2>
 
         <label htmlFor="name">Name</label>
@@ -50,7 +50,7 @@ export default function ModalForm({ modalState, onAddItem }) {
         <button className="btn-cancel" onClick={() => setShowModal(false)}>
           Cancel
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
