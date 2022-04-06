@@ -13,7 +13,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
 
   // Properties
-  const storageKey = "todo-test";
+  const storageKey = "todo-list";
 
   // Methods
   useEffect(() => loadData(storageKey, setList), []);
@@ -28,7 +28,6 @@ function App() {
 
   function saveData(key, getter) {
     const data = JSON.stringify(getter);
-
     localStorage.setItem(key, data);
   }
 
