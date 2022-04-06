@@ -37,18 +37,36 @@ function App() {
       name: name,
       price: price,
       imageURL: "",
-      isCompleted: false,
+      completed: false,
     };
 
     setList([...list, newItem]);
   }
+
+  // toggle item completed property
+  const toggleCompleted = (id) => {
+    let newList = list.map((item) => {
+      if (item.id === id) {
+        item.completed = !item.completed;
+        return item;
+      } else {
+        return item;
+      }
+    });
+    setList(newList);
+    console.log("toggle", list);
+  };
 
   return (
     <div className="App">
       <div className="content">
         {list.length === 0 && <WelcomeScreen setShowModal={setShowModal} />}
         {list.length > 0 && (
-          <ShoppingListScreen list={list} setShowModal={setShowModal} />
+          <ShoppingListScreen
+            list={list}
+            setShowModal={setShowModal}
+            toggleCompleted={toggleCompleted}
+          />
         )}
 
         <ModalForm

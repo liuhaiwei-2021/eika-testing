@@ -1,17 +1,27 @@
-function TodoItem({ item }) {
-  const { name, price, isCompleted, imageURL } = item;
-  return (
-    <li className="todo-item">
-      <input
-        className="item-check"
-        type="checkbox"
-        defaultChecked={isCompleted}
-      />
-      <span className="item-name">{name} </span>
-      <span className="item-price">{price}:-</span>
+import { useState } from "react";
 
-      {/* <input type="file" accept="image/png, image/jpeg" />
-      <img src={imageURL} alt="Thumbnail of the product" /> */}
+function TodoItem({ item, toggleCompleted }) {
+  const { id, name, price, completed, imageURL } = item;
+  const [checked, setChecked] = useState(false);
+
+  return (
+    <li className={item.completed ? "completed" : "uncompleted"}>
+      <div className="item-check-name">
+        <input
+          className="item-check"
+          checked={completed ? true : false}
+          onChange={() => setChecked(!checked)}
+          onClick={() => toggleCompleted(id)}
+          type="checkbox"
+        />
+        <span className="item-name">{name} </span>
+      </div>
+
+      <div className="item-price-img">
+        <span className="item-price">{price}:-</span>
+        {/* <input type="file" accept="image/png, image/jpeg" /> */}
+        <img className="item-img" src={imageURL} alt="" />
+      </div>
     </li>
   );
 }

@@ -1,22 +1,22 @@
 import TodoList from "../components/TodoList";
 import Sorter from "../components/Sorter";
 
-function ShoppingListScreen({ list, setShowModal }) {
-  const completedItems = list.filter((item) => item.isCompleted === true);
-  const unCompletedItems = list.filter((item) => item.isCompleted === false);
-  console.log(completedItems);
+function ShoppingListScreen({ list, setShowModal, toggleCompleted }) {
+  const completedItems = list.filter((item) => item.completed === true);
+  const unCompletedItems = list.filter((item) => item.completed === false);
+
   return (
     <div className="shopping-list">
       <h1>Shopping List</h1>
 
       <Sorter />
-      <TodoList list={unCompletedItems} />
+      <TodoList list={unCompletedItems} toggleCompleted={toggleCompleted} />
 
       <button className="btn-add" onClick={() => setShowModal(true)}>
         Add a new item
       </button>
 
-      <TodoList list={completedItems} />
+      <TodoList list={completedItems} toggleCompleted={toggleCompleted} />
     </div>
   );
 }
