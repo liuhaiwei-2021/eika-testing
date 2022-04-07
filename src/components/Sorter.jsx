@@ -23,7 +23,7 @@ function Sorter() {
     updateList(clonedList);
   }
   return (
-    <div className="sort">
+    <div className="sorter">
       <span>SortBy:</span>
       <button onClick={sortByName}>Name</button>
       <button onClick={sortByPrice}>Price</button>
