@@ -7,14 +7,13 @@ function TodoItem({ item }) {
 
   const { id, name, price, completed, imageURL } = item;
   const [checked, setChecked] = useState(false);
-  console.log(id);
 
   return (
     <li className={item.completed ? "completed" : "uncompleted"}>
       <div className="item-check-name">
         <input
           className="item-check"
-          checked={completed ? true : false}
+          checked={completed}
           onChange={() => setChecked(!checked)}
           onClick={() => toggleCompleted(id)}
           type="checkbox"
