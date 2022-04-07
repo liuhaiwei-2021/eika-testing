@@ -1,7 +1,10 @@
 // NPM packges
-import { useState } from "react";
+import { useState, useContext } from "react";
 
-export default function ModalForm({ modalState, onAddItem }) {
+import { TodosContext } from "../states/TodosContext";
+
+export default function ModalForm({ modalState }) {
+  const { addItem } = useContext(TodosContext);
   //local state
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -13,7 +16,7 @@ export default function ModalForm({ modalState, onAddItem }) {
   //Methods
   function onSubmit(e) {
     e.preventDefault();
-    onAddItem(name, price);
+    addItem(name, price);
     setName("");
     setPrice("");
     setShowModal(false);
@@ -44,9 +47,7 @@ export default function ModalForm({ modalState, onAddItem }) {
           onChange={(e) => setPrice(e.target.value)}
         />
 
-        <button className="btn-add" type="submit">
-          Create
-        </button>
+        <button className="btn-add">Create</button>
         <button className="btn-cancel" onClick={() => setShowModal(false)}>
           Cancel
         </button>

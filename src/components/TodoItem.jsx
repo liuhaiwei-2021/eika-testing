@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
-function TodoItem({ item, toggleCompleted }) {
+import { TodosContext } from "../states/TodosContext";
+
+function TodoItem({ item }) {
+  const { toggleCompleted } = useContext(TodosContext);
+
   const { id, name, price, completed, imageURL } = item;
   const [checked, setChecked] = useState(false);
+  console.log(id);
 
   return (
     <li className={item.completed ? "completed" : "uncompleted"}>

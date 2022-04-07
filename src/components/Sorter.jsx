@@ -1,6 +1,9 @@
-import React from "react";
+import { useContext } from "react";
 
-function Sorter({ list, setList }) {
+import { TodosContext } from "../states/TodosContext";
+
+function Sorter() {
+  const { list, updateList } = useContext(TodosContext);
   // Methods
   function sortByName() {
     const clonedList = [...list];
@@ -11,13 +14,13 @@ function Sorter({ list, setList }) {
       return productA > productB ? 1 : -1;
     });
 
-    setList(sortedList);
+    updateList(sortedList);
   }
 
   function sortByPrice() {
     const clonedList = [...list];
-    clonedList.sort((a, b) => b.price - a.price);
-    setList(clonedList);
+    clonedList.sort((a, b) => a.price - b.price);
+    updateList(clonedList);
   }
   return (
     <div className="sort">
