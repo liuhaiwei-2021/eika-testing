@@ -16,6 +16,7 @@ export default function ModalForm({ modalState }) {
   function onSubmit(e) {
     e.preventDefault();
     addItem(name, price);
+    setShowModal(false);
   }
 
   function resetForm() {

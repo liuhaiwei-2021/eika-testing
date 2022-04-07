@@ -27,7 +27,7 @@ const TodosContextProvider = (props) => {
       id: list.length,
       name: name,
       price: price,
-      imageURL: "",
+      imageURL: "/assets/images/image-default.svg",
       completed: false,
     };
 
@@ -53,11 +53,7 @@ const TodosContextProvider = (props) => {
 
   const values = { list, addItem, updateList, toggleCompleted };
 
-  return (
-    <TodosContext.Provider value={values}>
-      {props.children}
-    </TodosContext.Provider>
-  );
+  return <TodosContext.Provider value={values}>{props.children}</TodosContext.Provider>;
 };
 
 export default TodosContextProvider;

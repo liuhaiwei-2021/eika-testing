@@ -23,7 +23,10 @@ function ShoppingListScreen({ setShowModal }) {
         Add a new item
       </button>
 
-      <button onClick={() => setShowCompleted(!showCompleted)}>
+      <button className="toggle" onClick={() => setShowCompleted(!showCompleted)}>
+        <div className="toggle-icon">
+          <img src={`/assets/icons/${toggleLabel}.svg`} alt="icon" />
+        </div>
         {toggleLabel} completed items
       </button>
 

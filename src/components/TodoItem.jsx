@@ -23,8 +23,7 @@ function TodoItem({ item }) {
 
       <div className="item-price-img">
         <span className="item-price">{price}:-</span>
-        {/* <input type="file" accept="image/png, image/jpeg" /> */}
-        <img className="item-img" src={imageURL} alt="" />
+        <img className="item-img" src={imageURL} alt="item-img" />
       </div>
     </li>
   );
