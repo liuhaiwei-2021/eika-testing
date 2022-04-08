@@ -26,7 +26,7 @@ export default function ModalForm({ modalState }) {
 	}
 
 	return (
-		<div className="modal">
+		<div className="modal" data-testid="modal-form">
 			<form className="modal-content" onSubmit={(e) => onSubmit(e)}>
 				<h2>Create an item</h2>
 				<label htmlFor="name">Name</label>
