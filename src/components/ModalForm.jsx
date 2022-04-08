@@ -26,7 +26,7 @@ export default function ModalForm({ modalState }) {
 	}
 
 	return (
-		<div className="modal">
+		<div className="modal" data-testid="modal-form">
 			<form className="modal-content" onSubmit={(e) => onSubmit(e)}>
 				<h2>Create an item</h2>
 				<label htmlFor="name">Name</label>
@@ -47,9 +47,7 @@ export default function ModalForm({ modalState }) {
 					onChange={(e) => setPrice(e.target.value)}
 				/>
 
-				<button className="btn-add" onClick={resetForm}>
-					Create
-				</button>
+				<button className="btn-add">Create</button>
 				<button className="btn-cancel" onClick={resetForm}>
 					Cancel
 				</button>

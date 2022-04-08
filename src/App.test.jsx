@@ -4,7 +4,7 @@ import "@testing-library/jest-dom";
 import { TodosContext } from "./states/TodosContext";
 import App from "./App";
 
-test("header should render", () => {
+test("header should be rendered", () => {
 	const list = [];
 	render(
 		<TodosContext.Provider value={{ list }}>
@@ -15,7 +15,7 @@ test("header should render", () => {
 	expect(headerElement).toBeInTheDocument();
 });
 
-test("welcome screen  should be render if list.length is 0", () => {
+test("welcome screen should be render if list.length is 0", () => {
 	const list = [];
 	render(
 		<TodosContext.Provider value={{ list }}>
