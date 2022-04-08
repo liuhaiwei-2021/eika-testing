@@ -2,7 +2,7 @@ import React from "react";
 
 function WelcomeScreen({ setShowModal }) {
 	return (
-		<div className="welcome">
+		<div className="welcome" data-testid="welcome">
 			{/* <img className="logo" alt="logo" src="/assets/images/logo.svg" /> */}
 			<img className="sketch" alt="sketch" src="/assets/images/sketch.png" />
 			<h1>EIKA's shopping list</h1>

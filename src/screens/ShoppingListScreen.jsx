@@ -14,7 +14,7 @@ function ShoppingListScreen({ setShowModal }) {
 	const toggleLabel = showCompleted ? "Hide" : "View";
 
 	return (
-		<div className="shopping-list">
+		<div className="shopping-list" data-testid="shopping-list">
 			<h1>Shopping List</h1>
 			<Sorter />
 			<TodoList items={unCompletedItems} />
