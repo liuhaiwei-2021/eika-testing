@@ -1,17 +1,21 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+//NPM packages
+import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-
+//file packages
 import { TodosContext } from "./states/TodosContext";
 import App from "./App";
 
 test("header should be rendered", () => {
+	//Arrange
 	const list = [];
 	render(
 		<TodosContext.Provider value={{ list }}>
 			<App />
 		</TodosContext.Provider>
 	);
+	//Act
 	const headerElement = screen.getByTestId("header");
+	//Assert
 	expect(headerElement).toBeInTheDocument();
 });
 
@@ -27,6 +31,7 @@ test("welcome screen should be render if list.length is 0", () => {
 });
 
 test("shopping list screen  should be render if list.length more than 0", () => {
+	//Arrange
 	const list = [
 		{
 			id: 1,
@@ -41,6 +46,8 @@ test("shopping list screen  should be render if list.length more than 0", () => 
 			<App />
 		</TodosContext.Provider>
 	);
+	//Act
 	const shoppingElement = screen.getByTestId("shopping-list");
+	//Assert
 	expect(shoppingElement).toBeInTheDocument();
 });

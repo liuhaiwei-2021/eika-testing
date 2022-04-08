@@ -1,10 +1,12 @@
-import { render, screen } from "@testing-library/react";
+//NPM packages
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
+//file packages
 import { TodosContext } from "../states/TodosContext";
-
 import ShoppingListScreen from "./ShoppingListScreen";
 
 test("toggle button should be rendered", () => {
+	//Arrange
 	const list = [
 		{
 			id: 1,
@@ -26,6 +28,8 @@ test("toggle button should be rendered", () => {
 			<ShoppingListScreen />
 		</TodosContext.Provider>
 	);
+	//Act
 	const buttonElement = screen.getByTestId("toggle-icon");
+	//Assert
 	expect(buttonElement).toBeInTheDocument();
 });

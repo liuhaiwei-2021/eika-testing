@@ -4,20 +4,8 @@ import { TodosContext } from "../states/TodosContext";
 
 import ModalForm from "./ModalForm";
 
-test("create button should be rendered", () => {
-	const addItem = jest.fn();
-	const modalState = [true, () => {}];
-	render(
-		<TodosContext.Provider value={{ addItem }}>
-			<ModalForm modalState={modalState} />
-		</TodosContext.Provider>
-	);
-	const buttonElement = screen.getByTestId("create-btn");
-	fireEvent.click(buttonElement);
-	expect(buttonElement).toBeInTheDocument();
-});
-
 test("modalState is true modalform should be rendered", () => {
+	//Arrange
 	const addItem = jest.fn();
 	const modalState = [true, () => {}];
 	render(
@@ -25,11 +13,14 @@ test("modalState is true modalform should be rendered", () => {
 			<ModalForm modalState={modalState} />
 		</TodosContext.Provider>
 	);
+	//Act
 	const buttonElement = screen.getByTestId("create-btn");
+	//Assert
 	expect(buttonElement).toBeInTheDocument();
 });
 
 test("modalState is false modalform should be rendered", () => {
+	//Arrange
 	const addItem = jest.fn();
 	const modalState = [false, () => {}];
 	render(
@@ -37,6 +28,8 @@ test("modalState is false modalform should be rendered", () => {
 			<ModalForm modalState={modalState} />
 		</TodosContext.Provider>
 	);
+	//Act
 	const buttonElement = screen.queryByText("submit");
+	//Assert
 	expect(buttonElement).not.toBeInTheDocument();
 });

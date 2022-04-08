@@ -1,11 +1,11 @@
 // NPM packges
 import { useState, useContext } from "react";
-
+//project files
+import { TodosContext } from "../states/TodosContext";
 import form from "../data/form.json";
+import InputField from "./InputField";
 import validateName from "../scripts/validateName";
 import validatePrice from "../scripts/validatePrice";
-import { TodosContext } from "../states/TodosContext";
-import InputField from "./InputField";
 
 export default function ModalForm({ modalState }) {
 	const { addItem } = useContext(TodosContext);

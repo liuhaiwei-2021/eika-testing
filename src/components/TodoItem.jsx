@@ -1,11 +1,14 @@
+//NPM packages
 import { useState, useContext } from "react";
-
+// file packages
 import { TodosContext } from "../states/TodosContext";
 
-function TodoItem({ item }) {
+export default function TodoItem({ item }) {
+	//properties
 	const { toggleCompleted } = useContext(TodosContext);
-
 	const { id, name, price, completed, imageURL } = item;
+
+	//local state
 	const [checked, setChecked] = useState(false);
 
 	return (
@@ -30,5 +33,3 @@ function TodoItem({ item }) {
 		</li>
 	);
 }
-
-export default TodoItem;
