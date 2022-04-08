@@ -24,7 +24,8 @@ function ShoppingListScreen({ setShowModal }) {
 			</button>
 
 			<button className="toggle" onClick={() => setShowCompleted(!showCompleted)}>
-				<div className="toggle-icon">
+				{/*  UI #6 toggle button should be rendered */}
+				<div className="toggle-icon" data-testid="toggle-icon">
 					<img src={`/assets/icons/${toggleLabel}.svg`} alt="icon" />
 				</div>
 				{toggleLabel} completed items

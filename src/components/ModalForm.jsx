@@ -47,9 +47,7 @@ export default function ModalForm({ modalState }) {
 					onChange={(e) => setPrice(e.target.value)}
 				/>
 
-				<button className="btn-add" onClick={resetForm}>
-					Create
-				</button>
+				<button className="btn-add">Create</button>
 				<button className="btn-cancel" onClick={resetForm}>
 					Cancel
 				</button>

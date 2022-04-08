@@ -15,14 +15,14 @@ test("illustration should be rendered", () => {
 	expect(imgElement).toBeInTheDocument();
 });
 
-test("click create a task button  should open the modal form ", () => {
+test("create a task button  should rendered ", () => {
 	const list = [];
-
 	render(
 		<TodosContext.Provider value={{ list }}>
 			<WelcomeScreen />
 		</TodosContext.Provider>
 	);
+
 	const buttonElement = screen.getByText(/Add a new task/i);
 
 	expect(buttonElement).toBeInTheDocument();
