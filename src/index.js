@@ -6,7 +6,7 @@ import TodosContextProvider from "./states/TodosContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <TodosContextProvider>
-    <App />
-  </TodosContextProvider>
+	<TodosContextProvider>
+		<App />
+	</TodosContextProvider>
 );

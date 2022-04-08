@@ -20,7 +20,10 @@ function WelcomeScreen({ setShowModal }) {
 				the price of the item you want to add. You can also and an image after the item is
 				added by touching the camera icon.
 			</p>
-			<button className="btn-add" onClick={() => setShowModal(true)}>
+			<button
+				data-testid="welcome-btn"
+				className="btn-add"
+				onClick={() => setShowModal(true)}>
 				Add a new task
 			</button>
 			{/*  UI #5 Add a  new task button  should rendered */}
