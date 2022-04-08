@@ -5,34 +5,34 @@ import TodoList from "../components/TodoList";
 import Sorter from "../components/Sorter";
 
 function ShoppingListScreen({ setShowModal }) {
-  const { list } = useContext(TodosContext);
+	const { list } = useContext(TodosContext);
 
-  const completedItems = list.filter((item) => item.completed === true);
-  const unCompletedItems = list.filter((item) => item.completed === false);
+	const completedItems = list.filter((item) => item.completed === true);
+	const unCompletedItems = list.filter((item) => item.completed === false);
 
-  const [showCompleted, setShowCompleted] = useState(false);
-  const toggleLabel = showCompleted ? "Hide" : "View";
+	const [showCompleted, setShowCompleted] = useState(false);
+	const toggleLabel = showCompleted ? "Hide" : "View";
 
-  return (
-    <div className="shopping-list">
-      <h1>Shopping List</h1>
-      <Sorter />
-      <TodoList items={unCompletedItems} />
+	return (
+		<div className="shopping-list">
+			<h1>Shopping List</h1>
+			<Sorter />
+			<TodoList items={unCompletedItems} />
 
-      <button className="btn-add" onClick={() => setShowModal(true)}>
-        Add a new item
-      </button>
+			<button className="btn-add" onClick={() => setShowModal(true)}>
+				Add a new item
+			</button>
 
-      <button className="toggle" onClick={() => setShowCompleted(!showCompleted)}>
-        <div className="toggle-icon">
-          <img src={`/assets/icons/${toggleLabel}.svg`} alt="icon" />
-        </div>
-        {toggleLabel} completed items
-      </button>
+			<button className="toggle" onClick={() => setShowCompleted(!showCompleted)}>
+				<div className="toggle-icon">
+					<img src={`/assets/icons/${toggleLabel}.svg`} alt="icon" />
+				</div>
+				{toggleLabel} completed items
+			</button>
 
-      {showCompleted && <TodoList items={completedItems} />}
-    </div>
-  );
+			{showCompleted && <TodoList items={completedItems} />}
+		</div>
+	);
 }
 
 export default ShoppingListScreen;
