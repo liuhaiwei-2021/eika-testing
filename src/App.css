@@ -38,6 +38,17 @@ body {
 	margin: 0;
 }
 
+/* Header */
+.header {
+	height: 60px;
+	grid-column: 2/3;
+}
+.header ul {
+	list-style-type: none;
+}
+.header img {
+	max-height: 40px;
+}
 /* content */
 .content {
 	display: grid;
