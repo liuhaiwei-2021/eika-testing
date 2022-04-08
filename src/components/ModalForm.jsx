@@ -1,7 +1,11 @@
 // NPM packges
 import { useState, useContext } from "react";
 
+import form from "../data/form.json";
+import validateName from "../scripts/validateName";
+import validatePrice from "../scripts/validatePrice";
 import { TodosContext } from "../states/TodosContext";
+import InputField from "./InputField";
 
 export default function ModalForm({ modalState }) {
 	const { addItem } = useContext(TodosContext);
@@ -15,6 +19,7 @@ export default function ModalForm({ modalState }) {
 	//Methods
 	function onSubmit(e) {
 		e.preventDefault();
+
 		addItem(name, price);
 		setShowModal(false);
 	}
@@ -29,25 +34,20 @@ export default function ModalForm({ modalState }) {
 		<div className="modal" data-testid="modal-form">
 			<form className="modal-content" onSubmit={(e) => onSubmit(e)}>
 				<h2>Create an item</h2>
-				<label htmlFor="name">Name</label>
-				<input
-					type="text"
-					placeholder="Chair"
-					required
-					value={name}
-					onChange={(e) => setName(e.target.value)}
+				<InputField
+					settings={form.name}
+					state={[name, setName]}
+					validation={validateName}
+				/>
+				<InputField
+					settings={form.price}
+					state={[price, setPrice]}
+					validation={validatePrice}
 				/>
 
-				<label htmlFor="price">Price</label>
-				<input
-					type="number"
-					placeholder="599"
-					required
-					value={price}
-					onChange={(e) => setPrice(e.target.value)}
-				/>
-
-				<button className="btn-add">Create</button>
+				<button className="btn-add" data-testid="create-btn">
+					Submit
+				</button>
 				<button className="btn-cancel" onClick={resetForm}>
 					Cancel
 				</button>

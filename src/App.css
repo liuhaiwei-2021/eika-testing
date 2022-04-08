@@ -89,7 +89,7 @@ body {
 	background-color: #fefefe;
 	margin: 5% auto;
 	width: 327px;
-	height: 365px;
+	height: 380px;
 	padding: 20px;
 	border: 1px solid #888;
 }
@@ -114,6 +114,11 @@ label {
 	width: 200px;
 	height: 44px;
 	border-radius: 44px;
+}
+.error {
+	margin: 0;
+	padding: 0;
+	color: red;
 }
 
 /* shopping list screen */

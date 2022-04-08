@@ -18,7 +18,9 @@ function TodoItem({ item }) {
 					onClick={() => toggleCompleted(id)}
 					type="checkbox"
 				/>
-				<span className="item-name">{name} </span>
+				<span data-testid="item" className="item-name">
+					{name}
+				</span>
 			</div>
 
 			<div className="item-price-img">
