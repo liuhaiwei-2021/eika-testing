@@ -5,7 +5,7 @@ import "@testing-library/jest-dom";
 import { TodosContext } from "../states/TodosContext";
 import ShoppingListScreen from "./ShoppingListScreen";
 
-test("toggle button should be rendered", () => {
+test("#6 toggle button should be rendered", () => {
 	//Arrange
 	const list = [
 		{

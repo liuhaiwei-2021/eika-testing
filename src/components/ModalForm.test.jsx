@@ -4,7 +4,7 @@ import { TodosContext } from "../states/TodosContext";
 
 import ModalForm from "./ModalForm";
 
-test("modalState is true modalform should be rendered", () => {
+test("#7 modalState is true modalform should be rendered", () => {
 	//Arrange
 	const addItem = jest.fn();
 	const modalState = [true, () => {}];
@@ -19,7 +19,7 @@ test("modalState is true modalform should be rendered", () => {
 	expect(buttonElement).toBeInTheDocument();
 });
 
-test("modalState is false modalform should be rendered", () => {
+test("#8 modalState is false modalform should not be rendered", () => {
 	//Arrange
 	const addItem = jest.fn();
 	const modalState = [false, () => {}];

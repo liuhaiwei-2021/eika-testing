@@ -1,7 +1,7 @@
 // Project files
 import validateName from "./validateName";
 
-test("Should pass if everything is ok", () => {
+test("#1 Should pass if everything is ok", () => {
 	// Arrange
 	const testValidName = "table";
 	const resultData = "table";
@@ -15,7 +15,7 @@ test("Should pass if everything is ok", () => {
 	expect(validation.error).toBe(resultError);
 });
 
-test("Should fail if text is empty", () => {
+test("#2 Should fail if text is empty", () => {
 	// Arrange
 	const testOneEmptySpace = "";
 	const resultData = "";
@@ -29,7 +29,7 @@ test("Should fail if text is empty", () => {
 	expect(validation.error).toBe(resultError);
 });
 
-test("Should fail if we send multiple invisible spaces", () => {
+test("#3 Should fail if we send multiple invisible spaces", () => {
 	// Arrange
 	const testMutipleEmptySpaces = "   ";
 	const resultData = "";
@@ -43,7 +43,7 @@ test("Should fail if we send multiple invisible spaces", () => {
 	expect(validation.error).toBe(resultError);
 });
 
-test("Should pass if send a text with empty spaces on the side", () => {
+test("#4 Should pass if send a text with empty spaces on the side", () => {
 	// Arrange
 	const testValidNameWith3Spaces = "   table   ";
 	const resultData = "table";

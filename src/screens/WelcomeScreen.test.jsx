@@ -5,7 +5,7 @@ import "@testing-library/jest-dom";
 import { TodosContext } from "../states/TodosContext";
 import WelcomeScreen from "./WelcomeScreen";
 
-test("illustration should be rendered", () => {
+test("#4 illustration should be rendered", () => {
 	//Arrange
 	const list = [];
 	render(
@@ -19,7 +19,7 @@ test("illustration should be rendered", () => {
 	expect(imgElement).toBeInTheDocument();
 });
 
-test("create a task button  should rendered ", () => {
+test("#5 create a task button  should rendered ", () => {
 	//Arrange
 	const list = [];
 	render(

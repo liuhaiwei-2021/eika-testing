@@ -5,7 +5,7 @@ import "@testing-library/jest-dom";
 import { TodosContext } from "../states/TodosContext";
 import Sorter from "./Sorter";
 
-test("SortBy element should be rendered", () => {
+test("#9 SortBy element should be rendered", () => {
 	//Arrange
 	const list = [
 		{
@@ -35,7 +35,7 @@ test("SortBy element should be rendered", () => {
 	expect(sortByElement).toBeInTheDocument();
 });
 
-test("Click name button should call updateList", () => {
+test("#10 Click name button should call updateList", () => {
 	//Arrange
 	const list = [
 		{
