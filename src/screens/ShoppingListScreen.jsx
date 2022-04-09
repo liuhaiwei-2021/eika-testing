@@ -28,7 +28,7 @@ export default function ShoppingListScreen({ setShowModal }) {
 			</button>
 
 			<button className="toggle" onClick={() => setShowCompleted(!showCompleted)}>
-				{/*  UI # Add a  new task button  should rendered */}
+				{/*  UI #6 Add a  new task button  should rendered */}
 				<div className="toggle-icon" data-testid="toggle-icon">
 					<img src={`/assets/icons/${toggleLabel}.svg`} alt="icon" />
 				</div>

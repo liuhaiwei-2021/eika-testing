@@ -10,14 +10,14 @@ test("#6 toggle button should be rendered", () => {
 	const list = [
 		{
 			id: 1,
-			name: name,
+			name: "table",
 			price: 100,
 			imageURL: "",
 			completed: false,
 		},
 		{
 			id: 1,
-			name: name,
+			name: "TV",
 			price: 100,
 			imageURL: "",
 			completed: true,

@@ -29,7 +29,9 @@ export default function Sorter() {
 	return (
 		<div className="sorter">
 			<span>SortBy:</span>
+			{/* UI #9 SortBy element should be rendered */}
 			<button onClick={sortByName}>Name</button>
+			{/* UI #10 Click name button should call updateList */}
 			<button onClick={sortByPrice}>Price</button>
 		</div>
 	);

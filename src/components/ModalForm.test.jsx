@@ -14,9 +14,9 @@ test("#7 modalState is true modalform should be rendered", () => {
 		</TodosContext.Provider>
 	);
 	//Act
-	const buttonElement = screen.getByTestId("create-btn");
+	const formElement = screen.getByTestId("modal-form");
 	//Assert
-	expect(buttonElement).toBeInTheDocument();
+	expect(formElement).toBeInTheDocument();
 });
 
 test("#8 modalState is false modalform should not be rendered", () => {
@@ -29,7 +29,7 @@ test("#8 modalState is false modalform should not be rendered", () => {
 		</TodosContext.Provider>
 	);
 	//Act
-	const buttonElement = screen.queryByText("submit");
+	const formElement = screen.getByTestId("modal-form");
 	//Assert
-	expect(buttonElement).not.toBeInTheDocument();
+	expect(formElement).not.toBeInTheDocument();
 });

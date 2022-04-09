@@ -27,7 +27,7 @@ function WelcomeScreen({ setShowModal }) {
 				onClick={() => setShowModal(true)}>
 				Add a new task
 			</button>
-			{/*  UI #5 Add a  new task button  should rendered */}
+			{/*  UI #5 Add a new task button  should rendered */}
 		</div>
 	);
 }

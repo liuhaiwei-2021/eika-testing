@@ -31,8 +31,10 @@ export default function ModalForm({ modalState }) {
 	}
 
 	return (
-		<div className="modal" data-testid="modal-form">
-			<form className="modal-content" onSubmit={(e) => onSubmit(e)}>
+		<div className="modal">
+			<form data-testid="modal-form" className="modal-content" onSubmit={(e) => onSubmit(e)}>
+				{/* UI #7 modalState is true modalform should  be rendered" */}
+				{/* UI #8 modalState is false modalform should not be rendered" */}
 				<h2>Create an item</h2>
 				<InputField
 					settings={form.name}
