@@ -19,7 +19,7 @@ test("#7 modalState is true modalform should be rendered", () => {
 	expect(formElement).toBeInTheDocument();
 });
 
-test("#8 modalState is false modalform should not be rendered", () => {
+test("#8 modalState is false modalform should not be rendered so submit button should not be found", () => {
 	//Arrange
 	const addItem = jest.fn();
 	const modalState = [false, () => {}];
@@ -29,7 +29,7 @@ test("#8 modalState is false modalform should not be rendered", () => {
 		</TodosContext.Provider>
 	);
 	//Act
-	const formElement = screen.getByTestId("modal-form");
+	const buttonElement = screen.queryByText(/Submit/i);
 	//Assert
-	expect(formElement).not.toBeInTheDocument();
+	expect(buttonElement).not.toBeInTheDocument();
 });

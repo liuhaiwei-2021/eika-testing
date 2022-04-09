@@ -34,7 +34,7 @@ export default function ModalForm({ modalState }) {
 		<div className="modal">
 			<form data-testid="modal-form" className="modal-content" onSubmit={(e) => onSubmit(e)}>
 				{/* UI #7 modalState is true modalform should  be rendered" */}
-				{/* UI #8 modalState is false modalform should not be rendered" */}
+				{/* UI #8 modalState is false modalform should not be rendered so submit button should not be found" */}
 				<h2>Create an item</h2>
 				<InputField
 					settings={form.name}
